@@ -32,8 +32,8 @@ LEADS_CSV   = Path(__file__).parent / "leads.csv"
 SENT_LOG    = Path(__file__).parent / "sent_log.json"
 TEMPLATES   = {
     "finanse":       Path(__file__).parent / "template_finanse.html",
-    "nieruchomosci": Path(__file__).parent / "template_finanse.html",  # podmień gdy gotowy
-    "prawo":         Path(__file__).parent / "template_finanse.html",  # podmień gdy gotowy
+    "nieruchomosci": Path(__file__).parent / "template_nieruchomosci.html",
+    "prawo":         Path(__file__).parent / "template_prawo.html",
     "ksiegowosc":    Path(__file__).parent / "template_ksiegowosc.html",
 }
 SUBJECTS = {
