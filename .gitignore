@@ -1,0 +1,17 @@
+# Środowisko
+.env
+leads/.env
+*.pyc
+__pycache__/
+.venv/
+venv/
+
+# Pliki wyjściowe (duże pliki wideo)
+outputs/
+*.mp4
+*.mp3
+*.wav
+
+# Inne
+.DS_Store
+*.log

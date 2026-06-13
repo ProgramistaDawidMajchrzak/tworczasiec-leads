@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { margin: 0; padding: 0; background: #f0f0f0; font-family: Arial, sans-serif; }
+    .wrapper { max-width: 560px; margin: 24px auto; background: #ffffff; border-radius: 10px; overflow: hidden; }
+
+    /* HEADER */
+    .header { background: #0f1f3d; padding: 24px 32px; }
+    .header p { margin: 0; color: #7eb8f7; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+    .header h1 { margin: 6px 0 0; color: #ffffff; font-size: 22px; line-height: 1.3; }
+
+    /* BODY */
+    .body { padding: 28px 32px; color: #222; font-size: 15px; line-height: 1.65; }
+    .body p { margin: 0 0 16px; }
+
+    /* OBRAZ SOCIAL MEDIA */
+    .social-preview { margin: 4px 0 24px; border-radius: 8px; overflow: hidden; border: 1px solid #e5e5e5; }
+    .social-preview img { width: 100%; display: block; }
+    .social-caption { font-size: 12px; color: #888; text-align: center; padding: 8px 0 0; }
+
+    /* CTA */
+    .cta-block { margin: 24px 0 20px; text-align: center; }
+    .cta-btn {
+      display: inline-block;
+      background: #1a56db;
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 13px 34px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .cta-sub { font-size: 12px; color: #999; margin-top: 8px; }
+
+    /* FOOTER */
+    .footer { background: #f8f8f8; border-top: 1px solid #eee; padding: 18px 32px; font-size: 12px; color: #aaa; }
+    .footer a { color: #aaa; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <p>Dla doradców finansowych</p>
+    <h1>Twoi klienci szukają Cię<br>w internecie. Czy Cię znajdują?</h1>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+    <p>Dzień dobry,</p>
+
+    <p>
+      Większość doradców finansowych zdobywa klientów z polecenia.
+      To działa — ale <strong>ma sufit</strong>.
+      Tymczasem codziennie dziesiątki osób w Twoim mieście wpisuje w Google
+      <em>„doradca kredytowy"</em> albo trafia na filmik eksperta na Instagramie.
+      I zapisuje się do kogoś innego.
+    </p>
+
+    <p style="font-weight:600; font-size:16px; color:#0f1f3d; margin-bottom:8px;">
+      Tak mogą wyglądać Twoje social media:
+    </p>
+
+    <!-- TUTAJ WSTAW OBRAZ: wgraj plik do public/ na stronie i podaj URL -->
+    <div class="social-preview">
+      <img src="https://www.tworczasiec.pl/preview-finanse.jpg"
+           alt="Przykład profilu doradcy finansowego na Instagramie z rolkami eksperckimi" />
+    </div>
+    <p class="social-caption">Przykładowy profil z gotowymi rolkami eksperckimi</p>
+
+    <p>
+      Tworzymy krótkie filmiki eksperckie — z lektorem i animacją —
+      które przyciągają klientów szukających doradcy finansowego online.
+      <strong>Ty nie nagrywasz, nie wymyślasz tematów, nie montujesz.</strong>
+      Tylko publikujesz i odbierasz zapytania.
+    </p>
+
+    <div class="cta-block">
+      <a href="{{TRACKING_URL}}" class="cta-btn">
+        Zobacz jak to wygląda w praktyce →
+      </a>
+      <div class="cta-sub">Przykłady filmików dla branży finansowej</div>
+    </div>
+
+    <p>
+      Jeśli jesteś ciekaw jak to działa dla Twojej specjalizacji —
+      chętnie pokażę konkretny przykład.<br>
+      Wystarczy odpisać na tego maila.
+    </p>
+
+    <p>
+      Pozdrawiam,<br>
+      <strong>Dawid Majchrzak</strong><br>
+      Twórcza Sieć<br>
+      <span style="color:#888; font-size:13px;">biuro@tworczasiec.pl</span>
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Twórcza Sieć | biuro@tworczasiec.pl<br>
+    Wiadomość wysłana na podstawie publicznie dostępnych danych kontaktowych.
+    Nie chcesz więcej wiadomości?
+    <a href="{{UNSUBSCRIBE_URL}}">Wypisz się</a>.
+  </div>
+
+</div>
+</body>
+</html>

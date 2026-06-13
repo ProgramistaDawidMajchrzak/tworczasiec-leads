@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { margin: 0; padding: 0; background: #f0f0f0; font-family: Arial, sans-serif; }
+    .wrapper { max-width: 560px; margin: 24px auto; background: #ffffff; border-radius: 10px; overflow: hidden; }
+
+    /* HEADER */
+    .header { background: #0f1f3d; padding: 24px 32px; }
+    .header p { margin: 0; color: #7eb8f7; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+    .header h1 { margin: 6px 0 0; color: #ffffff; font-size: 22px; line-height: 1.3; }
+
+    /* BODY */
+    .body { padding: 28px 32px; color: #222; font-size: 15px; line-height: 1.65; }
+    .body p { margin: 0 0 16px; }
+
+    /* OBRAZ SOCIAL MEDIA */
+    .social-preview { margin: 4px 0 8px; border-radius: 8px; overflow: hidden; border: 1px solid #e5e5e5; }
+    .social-preview img { width: 100%; display: block; }
+    .social-caption { font-size: 12px; color: #888; text-align: center; padding: 6px 0 20px; }
+
+    /* WYRÓŻNIK */
+    .highlight-box {
+      background: #f0f5ff;
+      border-left: 4px solid #1a56db;
+      padding: 14px 18px;
+      margin: 0 0 20px;
+      border-radius: 0 6px 6px 0;
+      font-size: 14px;
+      color: #1a1a2e;
+    }
+
+    /* CTA */
+    .cta-block { margin: 24px 0 20px; text-align: center; }
+    .cta-btn {
+      display: inline-block;
+      background: #1a56db;
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 13px 34px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .cta-sub { font-size: 12px; color: #999; margin-top: 8px; }
+
+    /* FOOTER */
+    .footer { background: #f8f8f8; border-top: 1px solid #eee; padding: 18px 32px; font-size: 12px; color: #aaa; }
+    .footer a { color: #aaa; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <p>Dla biur rachunkowych</p>
+    <h1>Twoi przyszli klienci szukają księgowej w internecie.<br>Czy Cię tam widzą?</h1>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+    <p>Dzień dobry,</p>
+
+    <p>
+      Większość biur rachunkowych zdobywa klientów z polecenia. To działa —
+      ale <strong>ma sufit</strong>. Tymczasem codziennie dziesiątki firm w Twoim
+      mieście szuka księgowej wpisując w Google lub przeglądając Instagram
+      i zapisuje się do kogoś, kto po prostu <strong>jest widoczny online</strong>.
+    </p>
+
+    <p style="font-weight:600; font-size:16px; color:#0f1f3d; margin-bottom:8px;">
+      Tak możesz wyglądać w social mediach:
+    </p>
+
+    <div class="social-preview">
+      <img src="https://www.tworczasiec.pl/preview-finanse.jpg"
+           alt="Przykład profilu biura rachunkowego na Instagramie z rolkami eksperckimi" />
+    </div>
+    <p class="social-caption">Przykładowy profil z gotowymi rolkami eksperckimi dla branży księgowej</p>
+
+    <div class="highlight-box">
+      <strong>Jak to działa?</strong><br>
+      Tworzymy krótkie filmiki eksperckie (rolki) z Twoim głosem AI i animacją —
+      o VAT, ZUS, rozliczeniach, zmianach podatkowych. Publikujesz je na Instagramie
+      i TikToku. Klienci, którzy szukają księgowej, <strong>trafiają najpierw do Ciebie</strong>.
+    </div>
+
+    <p>
+      <strong>Ty nie nagrywasz, nie wymyślasz tematów, nie montujesz.</strong>
+      Dostajesz gotowe rolki — raz w tygodniu, przez cały miesiąc.
+      Wystarczy kliknąć „opublikuj".
+    </p>
+
+    <div class="cta-block">
+      <a href="{{TRACKING_URL}}" class="cta-btn">
+        Zobacz przykładowe rolki dla biur rachunkowych →
+      </a>
+      <div class="cta-sub">Bez rejestracji, bez zobowiązań</div>
+    </div>
+
+    <p>
+      Jeśli masz pytanie albo chcesz zobaczyć przykład dopasowany do Twojego
+      biura — wystarczy odpisać na tego maila.
+    </p>
+
+    <p>
+      Pozdrawiam,<br>
+      <strong>Dawid Majchrzak</strong><br>
+      Twórcza Sieć<br>
+      <span style="color:#888; font-size:13px;">biuro@tworczasiec.pl</span>
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Twórcza Sieć | biuro@tworczasiec.pl<br>
+    Wiadomość wysłana na podstawie publicznie dostępnych danych kontaktowych.
+    Nie chcesz więcej wiadomości?
+    <a href="{{UNSUBSCRIBE_URL}}">Wypisz się</a>.
+  </div>
+
+</div>
+</body>
+</html>
