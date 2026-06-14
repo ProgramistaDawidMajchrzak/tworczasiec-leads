@@ -105,7 +105,19 @@ def main():
             results[branża] = sent
             total_sent += sent
 
-    # 3. Telegram — podsumowanie
+    # 3. Follow-up do osób które kliknęły 5 dni temu
+    print("\n=== FOLLOW-UP ===")
+    _, followup_out = run([sys.executable, "leads/followup.py"])
+    print(followup_out)
+    followup_sent = 0
+    for line in followup_out.splitlines():
+        if line.startswith("Follow-up wysłany:"):
+            try:
+                followup_sent = int(line.split(":")[1].strip())
+            except (IndexError, ValueError):
+                pass
+
+    # 4. Telegram — podsumowanie
     lines = [f"✅ <b>Kampania {today} zakończona</b>\n"]
     for b, cnt in results.items():
         lines.append(f"  📧 {b}: {cnt} maili")
@@ -113,6 +125,8 @@ def main():
         lines.append("  ⚠️ Brak wysłanych maili (pusta kolejka?)")
     lines.append(f"\n<b>Łącznie: {total_sent}/{LIMIT_DZIENNIE} maili</b>")
     lines.append(f"🆕 Nowe leady: {new_leads}")
+    if followup_sent:
+        lines.append(f"🔁 Follow-up: {followup_sent}")
 
     tg("\n".join(lines))
     print("\n" + "\n".join(lines))

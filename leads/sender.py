@@ -68,10 +68,12 @@ def _unsubscribe_url(email: str, site_url: str) -> str:
     return f"{site_url.rstrip('/')}/api/unsubscribe?e={encoded}"
 
 
-def _render_template(template_path: Path, tracking_url: str, unsubscribe_url: str) -> str:
+def _render_template(template_path: Path, tracking_url: str, unsubscribe_url: str,
+                     firma: str = "") -> str:
     html = template_path.read_text(encoding="utf-8")
     html = html.replace("{{TRACKING_URL}}", tracking_url)
     html = html.replace("{{UNSUBSCRIBE_URL}}", unsubscribe_url)
+    html = html.replace("{{FIRMA}}", firma)
     return html
 
 
@@ -178,7 +180,7 @@ def main():
 
         tracking_url    = _tracking_url(email, args.branża, site_url)
         unsubscribe_url = _unsubscribe_url(email, site_url)
-        html            = _render_template(template, tracking_url, unsubscribe_url)
+        html            = _render_template(template, tracking_url, unsubscribe_url, firma)
 
         success = send_email(email, firma, subject, html, api_key, args.dry_run)
 
