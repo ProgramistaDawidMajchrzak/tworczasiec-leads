@@ -20,9 +20,10 @@ jobs:
         with:
           python-version: '3.11'
           cache: 'pip'
+          cache-dependency-path: requirements.txt
 
       - name: Install dependencies
-        run: pip install httpx requests beautifulsoup4 python-dotenv
+        run: pip install -r requirements.txt
 
       - name: Run daily campaign
         env:
