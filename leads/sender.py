@@ -156,11 +156,12 @@ def main():
     subject   = SUBJECTS[args.branża]
 
     # pomiń już wysłane, placeholder emaile i adresy z %20
+    sent_log_lower = {e.lower() for e in sent_log}
     pending = [l for l in leads
                if l.get("email")
                and not l["email"].strip().startswith("%")
                and l["email"].strip().lower() not in PLACEHOLDER_EMAILS
-               and l["email"] not in sent_log
+               and l["email"].strip().lower() not in sent_log_lower
                and not l.get("wysłano")]
 
     print(f"Branża: {args.branża} | Czeka: {len(pending)} | Limit: {args.limit}")
